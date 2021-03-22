@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  	<meta charset="utf-8">
+  	<meta name="description" content="Your description goes here">
+  	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://kit.fontawesome.com/aa1a2a1c33.js" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+		<title>Mood Tracker</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header>
+			<h1>Mood Tracker</h1>
+			<span><i class="fas fa-smile-beam"></i><i class="fas fa-smile-wink"></i><i class="fas fa-grin-squint"></i></span>
+		</header>
+		<main>
+			<div class="userInformation">
+				<% if (user.local.email) { %>
+						<h2>Current User:</h2>
+						<h3><%= user.local.email %></h3>
+						<!-- <h2>User Token:</h2>
+						<h3 class="tokenWidh"><%= user.local.password %></h3> -->
+				<% } %>
+
+				<!-- <h2><strong>Current user:</strong></h2> -->
+			</div>
+			<div class="content">
+				<h2 class="contentTitle">How are you feeling?</h2>
+
+				<div class="selectHolder">
+					<label for="feelingSelect">Today I feel: </label>
+					<select class="feelingSelect" name="feelingSelect" form="feelsForm">
+						<option value="&#128525;">In Love &#128525;</option>
+						<option value="&#128516;">Ecstatic &#128516;</option>
+						<option value="&#128515;" selected>Happy &#128515;</option>
+						<option value="&#128566;">Just okay &#128566;</option>
+						<option value="&#128577;">A little sad &#128577;</option>
+						<option value="&#128557;">Super Sad &#128557;</option>
+					</select>
+				</div>
+
+
+				<label for="feelsMessage"></label>
+				<textarea name="feelsMessage" form="feelsForm" placeholder="What happened today?"></textarea>
+
+				<form id="feelsForm" action="/user" method="post">
+					<div class="dateHolder">
+						<label for="date">Date:</label>
+						<input class="datePicker" type="date" name="date" value="">
+					</div>
+
+					<button type="submit" name="button">Submit</button>
+
+				</form>
+
+				<h3 class="prevRecordings hideTable">Previous Recordings</h3>
+
+				<div id="tableWrapper" class="tableWrapper">
+					<div class="scrollAssist">
+						<table class="moodTable" style="width:100%">
+							<thead>
+								<tr class="headtr">
+									<th>Date</th>
+									<th>Mood</th>
+									<th>Message</th>
+								</tr>
+							</thead>
+							<tbody class="tableBody">
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+
+
+
+		</main>
+		<footer>
+			<a href="/logout"><button type="button" name="button" act>Logout</button></a>
+
+			<a href="/resetAll"><button class="resetButton" type="button" name="button" act>Reset Mood Data</button></a>
+
+		</footer>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
