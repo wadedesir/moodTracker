@@ -1,6 +1,7 @@
 # Mood Tracker
 
-![image of mood tracker webpage](thumbnail.png?raw=true "Mood Tracker")
+![plot](thumbnail.png)
+<!-- ![image of mood tracker webpage](thumbnail.png?raw=true "Mood Tracker") -->
 
 ## How It's Made:
 
