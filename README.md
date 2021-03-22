@@ -1,7 +1,6 @@
 # Mood Tracker
 
-![plot](thumbnail.png)
-<!-- ![image of mood tracker webpage](thumbnail.png?raw=true "Mood Tracker") -->
+![alt text](https://github.com/wadedesir/moodTracker/blob/main/thumbnail.png?raw=true)
 
 ## How It's Made:
 
