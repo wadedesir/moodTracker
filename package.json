@@ -5,7 +5,7 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
-    "bcrypt-nodejs": "latest",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.19.0",
     "connect-flash": "~0.1.1",
     "cookie-parser": "~1.4.3",
