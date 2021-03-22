@@ -42,6 +42,8 @@ app.use(cookieParser()); // read cookies (needed for auth)
 app.use(express.json()); // get information from html forms
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'))
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
 
 app.set('view engine', 'ejs'); // set up ejs for templating
 
