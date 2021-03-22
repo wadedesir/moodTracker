@@ -1,6 +1,6 @@
 # Mood Tracker
 
-![alt text](https://github.com/wadedesir/moodTracker/blob/main/thumbnail.png?raw=true)
+![thumbnail of webpage](https://raw.githubusercontent.com/wadedesir/moodTracker/main/thumbnail.PNG)
 
 ## How It's Made:
 
